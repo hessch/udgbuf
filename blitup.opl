@@ -1,0 +1,20 @@
+blitup:
+  local fbr%, ch%, co%
+  fbr% = 1
+  while fbr% <= 15
+    co% = 0
+    if fbr% > 7
+      co% = 4
+    endif
+    ch% = 0
+    while ch% <= 3
+      if fbr% = 8
+        pokeudg:(ch%, fbr%-1, peekudg:(ch%+co%, fbr%-8))
+      else 
+        pokeudg:(ch%+co%, fbr%-2*co%-1, peekudg:(ch%+co%, fbr%-2*co%))
+      endif
+      ch% = ch% + 1
+    endwh
+    fbr% = fbr% + 1
+  endwh
+

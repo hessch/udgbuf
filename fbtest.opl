@@ -1,0 +1,23 @@
+fbtest:
+  local x%, y%
+  clearfb:
+  printfb:(8, 2)
+  at 3,1
+  print "Framebuffer Test";
+  y%  = 0
+  while y% <= 15
+    x% = 0
+    while x% <= 19
+      pset:(x%, y%, 1)
+      x% = x% + 1
+    endwh
+    y% = y% + 1
+  endwh
+  while y% >= 0
+    x% = 19
+    while x% >= 0
+      pset:(x%, y%, 0)
+      x% = x% - 2
+    endwh
+    y% = y% - 2
+  endwh

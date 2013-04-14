@@ -1,0 +1,25 @@
+pset:(x%, y%, state%)
+  local char%, row%, bit%
+  if x% > 19
+    return 1
+  endif
+  if y% > 15
+    return 1
+  endif
+  char% = int(x% / 5)
+  rem bit in udg row:
+  bit% = 4 - x% - 5 * char%
+  row% = y%
+  rem next row of chars if y% > 7
+  if y% > 7 
+    char% = char% + 4
+    row% = y% - 8
+  endif
+  if %state = 1
+    rem set pixel
+    pokeudg:(char%, row%, peekudg%:(char%, row%) or 2**bit%)
+  else
+    rem clear pixel
+    pokeudg:(char%, row%, peekudg%:(char%, row%) and not 2**bit%)
+  endif
+

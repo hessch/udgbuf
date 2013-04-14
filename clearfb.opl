@@ -1,0 +1,11 @@
+clearfb:
+  local i%, j%
+  i% = 0
+  while i% <= 7
+    j% = 0
+    while j% <= 7
+      pokeudg%:(i%, j%, 0)
+      j% = j% + 1
+    endwh
+    i% = i% + 1
+  endwh

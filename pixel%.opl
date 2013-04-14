@@ -1,0 +1,19 @@
+pixel%:(x%, y%)
+  local char%, row%, bit%
+  if x% > 19
+    return 0
+  endif
+  if y% > 15
+    return 0
+  endif
+  char% = int(x% / 5)
+  rem bit in udg row:
+  bit% = 4 - x% - 5 * char%
+  row% = y%
+  rem next row of chars if y% > 7
+  if y% > 7 
+    char% = char% + 4
+    row% = y% - 8
+  endif
+  return peekudg%:(char%, row%) and 2**bit%)
+

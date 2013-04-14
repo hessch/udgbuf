@@ -1,0 +1,3 @@
+peekudg%:(char%, row%)
+  pokeb $180, $40 + char%*8 + row%
+  return peekb($181)

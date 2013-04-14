@@ -1,0 +1,6 @@
+printfb:(xo%, yo)
+  at xo%, yo%
+  print chr$(0);chr$(1);chr$(2);chr$(3);
+  at xo%,yo% + 1
+  print chr$(4);chr$(5);chr$(6);chr$(7);
+
