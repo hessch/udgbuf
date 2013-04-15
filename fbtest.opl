@@ -21,3 +21,4 @@ fbtest:
     endwh
     y% = y% - 2
   endwh
+  at 8,4 : print "done";
