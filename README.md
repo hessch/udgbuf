@@ -6,7 +6,7 @@ Hessel Schut <hessel@isquared.nl>
 (c) 2009,2013 isquared.nl, Licensed under Creative Commons CC BY-SA 3.0
 
 UDGFB is a 20x16 framebuffer for Psion Organiser II devices based on the
-eight user-defined characters or the Hitachi HD44780 LCD controller in these
+eight user-defined characters for the Hitachi HD44780 LCD controller in these
 devices.
 
 The framebuffer uses the user-defined characters printed in the following
